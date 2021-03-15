@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>KERF Calculation</title>
+		<title>Printer Test</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -35,12 +35,13 @@
 							<!-- Content -->
 								<section>
 									<header class="main">
-										<h1>Group Project I: Calculating KERF</h1>
+										<h1>Group Project II: 3D Printer Precision</h1>
 									</header>
 
-									<span class="image main"><img src="photos/engraving.jpg" alt="" /></span>
+									<span class="image main"><img src="photos/prusai3.jpg" alt="" /></span>
                                     <h2>Project Description</h2>
-									<p>Choose a laser cutter and determine with tests kerf for that cutter. Document the project on a common website to which every group member can link to.
+									<p>
+                                        Choose a 3D printer and determine with tests the design rules/constraints. Document the project on a common website to which every group member can link to.
                                         </p>
                                     <p>This group project was done by <a href="https://iudexcorvus.github.io/site/index.html?fbclid=IwAR1CKtOG3UnUZVZhV_0E6WH-303mCl6gf5Qqr3KNBLTE_MvLEUM2u8yGcD0">Guðjón Hrafn Þórarinsson</a>, <a href="https://sararosalfreds.github.io/vefsidan-min/?fbclid=IwAR0iH9JbkdmZq0X_1nmBRZwDKkw19JZD5WY009E6KIl8fELDLPImxlProlA">Sara Rós Alfreðsdóttir</a> and <a href="en.aboutme.html">Stefán Rafn Gunnarsson</a>.
                                         </p>
@@ -48,55 +49,102 @@
 
 									<hr class="major" />
 
-									<h2>Choosing a lasercutter</h2>
-									<p>We started by choosing a laser cutter. There are three available at Fablab and the one we chose is an <a href="https://shop.epiloglaser.com/products/epilog-mini-24-laser">Eplilog Mini 24 Laser</a>.</p>
-                                    <span class="image main"><img src="photos/luke.jpg" alt="" /></span>
-									<p>The Epilog Mini 24 is a versatile CO2 laser machine and is utilized by customers for the highest-quality engraving and cutting of wood, acrylics, plastics, stone, and much more.
+									<h2>Choosing a 3D printer.</h2>
+									<p>We started by choosing a 3D printer. There are five different 3D printers available at Fablab and the one we chose is a <a href="https://shop.prusa3d.com/en/3d-printers/180-original-prusa-i3-mk3s-kit.html?gclid=EAIaIQobChMIqcGO-42w7wIVi57tCh2ctAqfEAAYASAAEgLTOPD_BwE">Prusa i3 MK3S</a>.</p>
+                                    <span class="image main"><img src="photos/prusa.jpg" alt="" /></span>
+									<p>The Original Prusa I3 MK3S+ is the successor of the award-winning Original Prusa i3 MK2 3D printer. With the rebuilt extruder, a plethora of sensors and the new magnetic MK52 heatbed with replaceable PEI spring steel print.
 
                                     It features a 24" x 12" (608 x 304 mm) work area and high-speed servo motors. You can create products quickly and easily with the laser system. </p>
 
 									<hr class="major" />
 
-									<h2>How can you calculate the size of kerf</h2>
-									<p>To be able to determine the size of kerf we have to do a few cuts and then measure spaces to calculate the size. We made our design in <a href="https://www.autodesk.co.uk/products/fusion-360/overview?mktvar002=3529790|SEM|11011303412|108892682395|aud-477657928718:kwd-11029869505&ef_id=EAIaIQobChMI4-iFlvuK7wIVlJOzCh08Iwb7EAAYAiAAEgJV5_D_BwE:G:s&s_kwcid=AL!11172!3!477796865516!e!!g!!fusion%20360!11011303412!108892682395&mkwid=s|pcrid|477796865516|pkw|fusion%20360|pmt|e|pdv|c|slid||pgrid|108892682395|ptaid|aud-477657928718:kwd-11029869505|pid|&utm_medium=cpc&utm_source=google&utm_campaign=&utm_term=fusion%20360&utm_content=s|pcrid|477796865516|pkw|fusion%20360|pmt|e|pdv|c|slid||pgrid|108892682395|ptaid|aud-477657928718:kwd-11029869505|&gclid=EAIaIQobChMI4-iFlvuK7wIVlJOzCh08Iwb7EAAYAiAAEgJV5_D_BwE">Fusion 360</a>. Our design is a big rectangle with ten smaller rectangles inside, as you can see on the image below.</p>
-                                    <span class="image main"><img src="photos/rectangle_design.png" alt="" /></span>
-									<p>We notice that there are 11 vertical lines. When the laser has cut the big rectangle will be a hole which we can place the smaller rectangles inside of. Then, by pushing the small rectangles to the left we create an empty space to the right. Measuring the width of that space and dividing it by 22 (amount of vertical lines times two) we get the exact size of the kerf. The reason for why we multiply the amount of lines by two is because we want to find the radius of the laser, if we would use 11 we would be calculating the diameter.</p>
+									<h2>How can we determine the accuracy of a 3D printer </h2>
+									<p>To be able to determine the accuracty of the printer ,and thus the design constraints, we have to do a print a design that focuses on minimal lines, overhangs, sharpness and curvature.We used a test print that is used all over the world for all printers. Here is a <a href="https://www.thingiverse.com/thing:2975429">link</a> to the downloadable design that can be seen on the photos below.</p>
+                                    <div class="row">
+  <div class="column">
+    <img src="photos/3dfront.jpg" alt="Snow" style="width:80%">
+  </div>
+  <div class="column">
+    <img src="photos/3dside.jpg" alt="Forest" style="width:80%">
+  </div>
 
+									<p>We can see that the model has two  big overhangs one starting at  15° going to 75° taking four 15° steps and the second one starting at 10° going to 80° with seven 10° steps. When this is printed we will be able to see how the plastic is affected by the fact that it's hanging without any support. We can also notice that bridging, stringing, sharp corners, scale/diameter and tolerance is tested.</p>
+                                    <div class="row">
+  <div class="column">
+    <img src="photos/frontdefined.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="photos/backdefined.jpg" alt="Forest" style="width:100%">
+  </div>
+</div>
+<p>Testing all of these properties individually is important to be able to define the limits of the 3D printer. Knowing each and every thickness of every line of the design will give us the capability of measuring the printed model and defining where the limits lay. Some of the thin lines will be too thick, a part of the hangover will have leakage due to gravity and some parts might have too much stringyness between them.</p>
+                            <div class="column">
+    <img src="photos/topdefined.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="photos/tolerancedefined.jpg" alt="Forest" style="width:100%">
+  </div>
+                                         </div>
+
+                                    
+                                    
+                                    
+                                    
 									<hr class="major" />
 
-									<h2>Let's get to cutting</h2>
-									<p>To cut our design out we did the following steps.</p>
-                                    <h4>Steps</h4>
+									<h2>Printing the design.</h2>
+									<p>To print the design we tranferred the design in to <a href="https://ultimaker.com/software/ultimaker-cura">Cura Ultimaker</a> which is the world's most popular 3D printing software. There we only have to choose the printer we are using and then we slice the object. After doing this the object is ready to print. We transferred the file on to a SD card and then put the card into the printer. It took 2 hours and 7 minutes to print. </p>
+                                    <h4>Steps for Cura Ultimaker</h4> 
 															<ol>
-																<li>Sketched our design in Fusion 360 and saved it as a dxf file.</li>
-																<li>Opened the file in <a href="https://inkscape.org/">Inkscape</a>, and set the thickness to an incredibly small size () so it wouldnt affect the thickness of the cut. </li>
-																<li>From Inkscape we exported the file as a pdf file, which is the format the printer uses.</li>
-																<li>Set the printer up and pressed print.</li>
+												<li>Save the file in Fusion 360 as a .stl file.</li>
+												<li>Choose the selected printer and open the .stl file</li>
+												<li>Press the big "Slice" button in the bottom left cornet</li>
+												<li>Click "Save to file" and connect the file with the printer, which is possible both through internet and sd card.</li>
 															</ol>
+                                    <span class="image main"><img src="photos/ultimaker.png" alt="" /></span>
                                     <hr class="major" />
 
 									<h2>Results</h2>
 									<p>Now we have our big rectangle hole on a wooden board, as was explained earlier we now put the small rectangles inside the hole and push them to the left.</p>
-                                    <span class="image main"><img src="photos/testcut.jpg" alt="" /></span>
+                                    <div class="row">
+  <div class="column">
+    <img src="photos/printtest/front.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="photos/printtest/IMG_3107.jpg" alt="Forest" style="width:100%">
+  </div>
+</div>
                                     <p>Measuring the size of the empty space of the right thats visible on the photo using a caliper we got a reading of 3.26mm. Dividing that by 22 we get that the size of the KERF. Our result was 0.14818182mm which is almost quite spot on. So if we consider a margin of error of 0.01mm the accurate size would be within the margin.</p>
+                                    <div class="row">
+  <div class="column">
+    <img src="photos/printtest/side.jpg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="photos/printtest/leftside.jpg" alt="Forest" style="width:100%">
+  </div>
+</div>
+                                    <p>Looking at the overhang we can notice that the printed plastic is quite alright at 20° but going above that the plastic starts spilling down due to gravity, the bottom layer of the overhang doesn't harden correctly.</p>
+                                     <span class="image main"><img src="photos/printtest/overhang.jpg" alt="" /></span>
+                                    
+                                    
                                     
                                      <hr class="major" />
 
 									<h2>What did we learn?</h2>
-									<p>Now that we have determined the size of the kerf we can precicely cut out what ever we want by designing our own objects and then offsetting  the lines of the scetch by the size of the kerf.</p>
+									<p>Now that we have studied the test print we can define our own models in a way that prints well. </p>
                                     
                                       <hr class="major" />
 
 									<h2>Teamwork</h2>
 									<p>We all worked well together for this project. As this was a minimal project it didn't take much time however it taught us a lot. <br>
-                                        The time was divided into designing, cutting, calculating and coding.
+                                        The time was divided into printing, measuring, calculating and coding.
                                         
                                         
                                 </p>
                                 
 															<ol>
-																<li>Sketched our design in Fusion 360, moved it to incscape and made it ready for cut. Approximately 30 minutes. Done by Guðjón</li>
-																<li>Measured and calculated the KERF. We did this a few times to get a good reading. Followed by deep thinking and convesation between all of us in the group. Approximately 30 minutes. Everyone was involved. </li>
+													<li>Sara started the printing of the object before Guðjón and Stefán arrived. It took a while to print so we all waited together for it and planned our project together while waiting. Aproximately 2 hours</li>
+																<li>We then looked closely together at the part discussing how it is affected by various things and reasons for why some of the parts are</li>
 																<li>Coding the webpage to show how we did this. Approximately 2 hours. Everyone was involved.</li>
 															</ol>
 								</section>
@@ -137,8 +185,7 @@
 										<li>
 											<span class="opener">Group Projets</span>
 											<ul>
-												<li><a href="en.kerf.html">Project 1: Laser Cut Precision Calculation</a></li>
-												<li><a href="en.precision.html">Project 2: The efficiency of a 3D printer</a></li>
+°												<li><a href="en.precision.html">Project 2: The efficiency of a 3D printer</a></li>
 											</ul>
 										</li>
                                         <li><a href="photos.html">All photos on this site</a></li>
