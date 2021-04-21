@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Making a mold</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Manufacturing Processes</strong> Stefán Rafn Gunnarsson</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Group Project V: Making a mold</h1>
+									</header>
+
+									<span class="image main"><img src="photos/mold.jpeg" alt="" /></span>
+                                    <h2>Project Description</h2>
+									<p>
+                                        Design, draw, prepare and mill a mold in either foam plastic or wax. Prepare toolpaths, both roughing and finishing. 
+                                        Describe the process and the result on a common website. Read the MSDS (safety instructions for the relevant material).
+                                        
+ 
+
+Efnisnotkun:
+
+- 30x30x30cm frauðplast
+
+- 10x10x5 cm vax
+                                        </p>
+                                    <p>This group project was done by <a href="https://iudexcorvus.github.io/site/index.html?fbclid=IwAR1CKtOG3UnUZVZhV_0E6WH-303mCl6gf5Qqr3KNBLTE_MvLEUM2u8yGcD0">Guðjón Hrafn Þórarinsson</a>, <a href="https://sararosalfreds.github.io/vefsidan-min/?fbclid=IwAR0iH9JbkdmZq0X_1nmBRZwDKkw19JZD5WY009E6KIl8fELDLPImxlProlA">Sara Rós Alfreðsdóttir</a> and <a href="en.aboutme.html">Stefán Rafn Gunnarsson</a>.
+                                        </p>
+									
+
+									<hr class="major" />
+
+									<h2>Our Design</h2>
+									<p>For our big CNC project we made a <a href="https://shop.prusa3d.com/en/3d-printers/180-original-prusa-i3-mk3s-kit.html?gclid=EAIaIQobChMIqcGO-42w7wIVi57tCh2ctAqfEAAYASAAEgLTOPD_BwE">wine shelf</a> for bottles of wine and wine glasses. To add to the finishing of the shelf we decided to make grapes that are put in to the shelf. The grapes will be made with the mold that we made for this project.</p>
+                                    
+                                    
+                                    <span class="image main"><img src="photos/Grapes.png" alt="" /></span>
+									
+
+									<hr class="major" />
+
+									<h2>Making the mold</h2>
+									<p>We start by sketching a rectangle around the grapes and extruding it so that we have a box covering the grape with a bit of space in all directions.</p>
+                                    <span class="image main"><img src="photos/box.png" alt="" /></span>
+                                    <p>Next using the grapes as a tool we usid the combine feature to cut a mold of the grapes in to the box.</p>
+                                    <span class="image main"><img src="photos/combinecut.png" alt="" /></span>
+                                    <p>We then constructed a plane that suited the object to cut the box in to a top and bottom part.</p>
+                                    <span class="image main"><img src="photos/cut.png" alt="" /></span>
+                                    <p>When using the mold we want the top and bottom parts to fit perfectly together without any sliding or moving. An easy solution to that is making spheres in every corner of the bottom part that stand out and then cut them into the top part, which will make them fit together.<br>This can be done by using the create -> sphere function and locating one sphere in the top left corner. Then by using create -> pattern -> rectangular pattern it's easy to locate 3 new spheres in the other corners.</p>
+                                    <span class="image main"><img src="photos/repeat.png" alt="" /></span>
+                                    <p>Then the next step was obviously to use the bottom part as a tool to cut the spheres in to the top part. By doing this they are located in a perfect position.
+                                        <br><br>
+                                        Next using the hole function we made the hole in the mold which the material will be poured into.
+                                    </p>
+                                    <span class="image main"><img src="photos/hole.png" alt="" /></span>
+                                    
+                                    <p>Now the mold is ready. However we will not be milling the mold. We will be milling a mold which we pour silicone into whick makes the mold for the grapes. So the next steps are to allign the top and bottom part side by side with a bit of space between them.</p>
+                                    <span class="image main"><img src="photos/space.png" alt="" /></span>
+                                    <p>We then create a bigger box surrounding the top and bottom mold parts. Then using the two parts as tools we cut two pockets in the big box which will be our wax mold which we pour silicone into to make molds for the grapes.</p>
+                                    <span class="image main"><img src="photos/moldready.png" alt="" /></span>
+                                    
+                                    
+                            
+                                    
+									<hr class="major" />
+
+									<h2>Milling</h2>
+									<p>When our mold design is ready we have to create a toolpath which tells our CNC machine how to mill our mold.
+                                    To do so we go into manifacture -> setup -> new setup. There we start by chosing our milling machine, then operation setup. Because our mold is upside down we have to chose our x and y axis and then our origin point.</p>
+                                    <span class="image main"><img src="photos/stock.png" alt="" /></span>
+                                    <p>Then we go into the stock tab to define our stock and chose from solid and then click click our mold. This makes it so it will only mill our mold.
+                                    <br> Now we have defined our mold and the x, y and z axis. Next up is the toolpath.</p>
+                                    
+                                    <h2>Toolpath</h2>
+                                    <p>In manifacture we choose 2D -> 2D pocket. Then we choose our tool. A lot of setting can be changed here depending on the material used. Then in geometry -> pockets we chose everything we want to mill. Next we have heights which we leave untouched. In passes we change sideways compensation from left to right and in multiple depths we change maximum roughing stepdown to 0.5mm and uncheck the stock to leave box. The next tab is linking which is the settings for how our tool will move between gcodes there we choose smooth profile. Then we are ready to press ok.</p>
+                                    <span class="image main"><img src="photos/pockets.png" alt="" /></span>
+                                    <p> We have now created a toolpath. To simulate it left-click the setup and press simulate.</p>
+                                    <span class="image main"><img src="photos/simulation.mov" alt="" /></span>
+                                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/539793333" width="640" height="428" frameborder="0" allowfullscreen></iframe>
+                                    
+                                    <p>Now to if we are happy with the result we again left-click our setup and click post-process to extract our gcode. <br> Here it's very imporant to choose the right machine, the one at fablab is called ShopBot.</p>
+                                    <span class="image main"><img src="photos/gcode.png" alt="" /></span>
+                                    <p>Then we are all done</p>
+                                    
+                                    <hr class="major" />
+
+									
+
+									<h2>What did we learn?</h2>
+									<p>We now are now capable of making a mold using a CNC milling machine. :) </p>
+                                    <hr class="major" />
+
+									<h2>Steps</h2>
+									<p>The process of making this mold:</p>
+                                    <ol>
+													<li>Design the object for the mold</li>
+												    <li>Sketch a recetangle and extrude it so it makes a box covering the object.</li>
+												    <li>Construct a plane which will be used to cut the box in to a top and bottom part.</li>
+                                                    <li>Cut the box using the plane made in step 3.</li>
+                                                    <li>Cut the top and bottom part using the object, so it becomes a mold.</li>
+                                                    <li>Construct spheres in the corners of the bottom part and cut them into the top part, so that the parts will fit together.</li>
+                                                    <li>Make a hole in the middle for the materials to be poured into.</li>
+                                                    <li>Check if the mold will work using draft analysis. (inspect -> draft analysis)</li>
+                                                    <li>Align the top and bottom part so that they will be side by side with a small space between them.</li>
+                                                    <li>Sketch a rectangle that covers both parts and extrude it into a big box.</li>
+                                                    <li>Cut the big box using the top and bottom mold part.</li>
+                                                    <li>Make toolpaths using the instructions above.</li>
+															</ol>
+                                    
+                                    
+                                    
+                                      <hr class="major" />
+
+									<h2>Teamwork</h2>
+									<p>We all worked well together for this project. As this was a minimal project it didn't take much time however it taught us a lot. <br>
+                                        The time was divided into printing, measuring, calculating and coding.
+                                        
+                                        
+                                </p>
+                                
+															<ol>
+													<li>Sara started the printing of the object before Guðjón and Stefán arrived. It took a while to print so we all waited together for it and planned our project together while waiting. Approximately 2 hours. Everyone was involved</li>
+																<li>We then looked closely together at the part discussing how it is affected by various things and reasons for why some of the parts are not perfect. Approximately 40 minutes. Everyone was involved.</li>
+																<li>Coding the webpage to show how we did this. Approximately 2 hours. Everyone was involved.</li>
+															</ol>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="en.index.html">Homepage</a></li>
+										<li><a href="en.aboutme.html">About me</a></li>
+										<li><a href="elements.html">Elements</a></li>
+										<li>
+											<span class="opener">My Projects</span>
+											<ul>
+												<li><a href="Website">Making a Website</a></li>
+												<li><a href="laser.html">Laser Cut</a></li>
+												<li><a href="3d.html">3D Scanning and Printing</a></li>
+								
+											</ul>
+										</li>
+								
+										<li>
+											<span class="opener">Group Projets</span>
+											<ul>
+												<li><a href="en.kerf.html">Project 1: Laser Cut Precision Calculation</a></li>
+												<li><a href="en.kerf">Project 2: The efficiency of a 3D printer</a></li>
+                                                <li><a href="en.mold.html">Project 5: Making a mold</a></li>
+											</ul>
+										</li>
+                                        <li><a href="photos.html">All photos on this site</a></li>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>All photos used on this site and more.</h2>
+									</header>
+									<div class="mini-posts">
+										<article>
+											<a href="#" class="image"><img src="photos/Profile.JPG" alt="" /></a>
+											<p>This is me.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="photos/Bridge.jpeg" alt="" /></a>
+											<p>This is a bridge.</p>
+										</article>
+										<article>
+											<a href="#" class="image"><img src="photos/circularwindow.jpeg" alt="" /></a>
+											<p>Circular windows on a spherical building.</p>
+										</article>
+									</div>
+									<ul class="actions">
+										<li><a href="#" class="button">More</a></li>
+									</ul>
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>If there are any questions please contact me via email, phone or doves.</p>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">stefanrafn96@gmail.com</a></li>
+										
+									</ul>
+                            </section>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
