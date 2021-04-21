@@ -42,16 +42,7 @@
                                     <h2>Project Description</h2>
 									<p>
                                         Design, draw, prepare and mill a mold in either foam plastic or wax. Prepare toolpaths, both roughing and finishing. 
-                                        Describe the process and the result on a common website. Read the MSDS (safety instructions for the relevant material).
-                                        
- 
-
-Efnisnotkun:
-
-- 30x30x30cm frauðplast
-
-- 10x10x5 cm vax
-                                        </p>
+                                        Describe the process and the result on a common website. Read the MSDS (safety instructions for the relevant material). </p>
                                     <p>This group project was done by <a href="https://iudexcorvus.github.io/site/index.html?fbclid=IwAR1CKtOG3UnUZVZhV_0E6WH-303mCl6gf5Qqr3KNBLTE_MvLEUM2u8yGcD0">Guðjón Hrafn Þórarinsson</a>, <a href="https://sararosalfreds.github.io/vefsidan-min/?fbclid=IwAR0iH9JbkdmZq0X_1nmBRZwDKkw19JZD5WY009E6KIl8fELDLPImxlProlA">Sara Rós Alfreðsdóttir</a> and <a href="en.aboutme.html">Stefán Rafn Gunnarsson</a>.
                                         </p>
 									
@@ -70,7 +61,7 @@ Efnisnotkun:
 									<h2>Making the mold</h2>
 									<p>We start by sketching a rectangle around the grapes and extruding it so that we have a box covering the grape with a bit of space in all directions.</p>
                                     <span class="image main"><img src="photos/box.png" alt="" /></span>
-                                    <p>Next using the grapes as a tool we usid the combine feature to cut a mold of the grapes in to the box.</p>
+                                    <p>Next using the grapes as a tool we use the combine feature to cut a mold of the grapes in to the box.</p>
                                     <span class="image main"><img src="photos/combinecut.png" alt="" /></span>
                                     <p>We then constructed a plane that suited the object to cut the box in to a top and bottom part.</p>
                                     <span class="image main"><img src="photos/cut.png" alt="" /></span>
@@ -82,7 +73,7 @@ Efnisnotkun:
                                     </p>
                                     <span class="image main"><img src="photos/hole.png" alt="" /></span>
                                     
-                                    <p>Now the mold is ready. However we will not be milling the mold. We will be milling a mold which we pour silicone into whick makes the mold for the grapes. So the next steps are to allign the top and bottom part side by side with a bit of space between them.</p>
+                                    <p>Now the mold is ready. However we will not be milling the mold. We will be milling a mold which we pour silicone into, which makes the mold for the grapes. So the next steps are to allign the top and bottom part side by side with a bit of space between them.</p>
                                     <span class="image main"><img src="photos/space.png" alt="" /></span>
                                     <p>We then create a bigger box surrounding the top and bottom mold parts. Then using the two parts as tools we cut two pockets in the big box which will be our wax mold which we pour silicone into to make molds for the grapes.</p>
                                     <span class="image main"><img src="photos/moldready.png" alt="" /></span>
@@ -96,26 +87,26 @@ Efnisnotkun:
 									<p>When our mold design is ready we have to create a toolpath which tells our CNC machine how to mill our mold.
                                     To do so we go into manifacture -> setup -> new setup. There we start by chosing our milling machine, then operation setup. Because our mold is upside down we have to chose our x and y axis and then our origin point.</p>
                                     <span class="image main"><img src="photos/stock.png" alt="" /></span>
-                                    <p>Then we go into the stock tab to define our stock and chose from solid and then click click our mold. This makes it so it will only mill our mold.
+                                    <p>Then we go into the stock tab to define our stock and choose from solid and then click our mold. This makes it so it will only mill our mold.
                                     <br> Now we have defined our mold and the x, y and z axis. Next up is the toolpath.</p>
                                     
                                     <h2>Toolpath</h2>
-                                    <p>In manifacture we choose 2D -> 2D pocket. Then we choose our tool. A lot of setting can be changed here depending on the material used. Then in geometry -> pockets we chose everything we want to mill. Next we have heights which we leave untouched. In passes we change sideways compensation from left to right and in multiple depths we change maximum roughing stepdown to 0.5mm and uncheck the stock to leave box. The next tab is linking which is the settings for how our tool will move between gcodes there we choose smooth profile. Then we are ready to press ok.</p>
+                                    <p>In manifacture we choose 2D -> 2D pocket. Then we choose our tool. A lot of setting can be changed here depending on the material used. Then in geometry -> pockets we chose everything we want to mill. Next we have heights which we leave untouched. In passes we change sideways compensation from left to right and in multiple depths we change maximum roughing stepdown to 0.5mm and uncheck the stock to leave box. The next tab is linking which is the settings for how our tool will move between gcodes. There we choose smooth profile. Then we are ready to press ok.</p>
                                     <span class="image main"><img src="photos/pockets.png" alt="" /></span>
                                     <p> We have now created a toolpath. To simulate it left-click the setup and press simulate.</p>
                                     <span class="image main"><img src="photos/simulation.mov" alt="" /></span>
                                     <iframe title="vimeo-player" src="https://player.vimeo.com/video/539793333" width="640" height="428" frameborder="0" allowfullscreen></iframe>
                                     
-                                    <p>Now to if we are happy with the result we again left-click our setup and click post-process to extract our gcode. <br> Here it's very imporant to choose the right machine, the one at fablab is called ShopBot.</p>
+                                    <p>Now if we are happy with the result, we again left-click our setup and click post-process to extract our gcode. <br> Here it's very imporant to choose the right machine, the one at fablab is called ShopBot.</p>
                                     <span class="image main"><img src="photos/gcode.png" alt="" /></span>
-                                    <p>Then we are all done</p>
+                                    <p>Then we are all done.</p>
                                     
                                     <hr class="major" />
 
 									
 
 									<h2>What did we learn?</h2>
-									<p>We now are now capable of making a mold using a CNC milling machine. :) </p>
+									<p>We are now capable of making a mold using a CNC milling machine. :) </p>
                                     <hr class="major" />
 
 									<h2>Steps</h2>
@@ -151,6 +142,12 @@ Efnisnotkun:
 																<li>We then looked closely together at the part discussing how it is affected by various things and reasons for why some of the parts are not perfect. Approximately 40 minutes. Everyone was involved.</li>
 																<li>Coding the webpage to show how we did this. Approximately 2 hours. Everyone was involved.</li>
 															</ol>
+                                    <hr class="major" />
+                                    <h2>Downloadable files</h2>
+                                    <ul class="actions">
+											<li><a href="Grape%20Mold.zip" class="button big">Grape Mold Files</a></li>
+										</ul>
+                                   
 								</section>
 
 						</div>
